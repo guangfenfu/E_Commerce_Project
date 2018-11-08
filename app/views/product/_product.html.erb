@@ -1,0 +1,19 @@
+
+
+
+
+
+  <div class="product">
+    <p>
+      <h6><b>Name: </b> <%= link_to product.name, product %></h6><br>
+      <% if product.image_link.present? %>
+        <%= image_tag product.image_link.url %><br>
+      <% end %>
+      <b>Brand: </b> <%= product.brand.name %><br>
+      <%# <b>Category: </b> <%= product.category.name %>
+      <%# <b>Category: </b> <%= @categories.all %>
+      <b>Category: </b> <%= product.categories.map { |cat| cat.name }.join(", ") %><br>
+      <b>Price: $</b> <%= product.price %><br>
+      <b>Description: </b> <%= product.description %><br>
+    </p>
+  </div>

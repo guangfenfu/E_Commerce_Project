@@ -1,0 +1,7 @@
+
+<p>About US: <%= @about.introduction %></p><br>
+
+<% if @about.img.present? %>
+        <p>ERD: </p><br>
+        <p><%= image_tag @about.img.url %></p><br>
+<% end %>
